@@ -7,3 +7,5 @@ Kolom dari masing-masing tabel
 - pembalap: id, foto, nama, asal_negara, team_id, divisi_id
 - divisi: divisi_id, nama_divisi
 - team: team_id, nama_team
+
+Untuk Alur program terdapat CRUD pada umumnya
