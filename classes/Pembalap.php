@@ -27,6 +27,18 @@ class Pembalap extends Team
         return $this->execute($query);
     }
 
+    function filterPembalapasc()
+    {
+        $query = "SELECT * FROM pembalap JOIN divisi ON pembalap.divisi_id=divisi.divisi_id JOIN team ON pembalap.team_id=team.team_id ORDER BY nama";
+        return $this->execute($query);
+    }
+
+    function filterPembalapdesc()
+    {
+        $query = "SELECT * FROM pembalap JOIN divisi ON pembalap.divisi_id=divisi.divisi_id JOIN team ON pembalap.team_id=team.team_id ORDER BY nama DESC";
+        return $this->execute($query);
+    }
+
     function addData($data, $file)
     {
         $foto = $file['foto']['name'];

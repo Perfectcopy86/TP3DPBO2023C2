@@ -14,7 +14,12 @@ $listPembalap->getPembalapJoin();
 
 if (isset($_POST['btn-cari'])) {
     $listPembalap->searchPembalap($_POST['cari']);
-} else {
+}else if(isset($_POST['btn-filter'])){
+    $listPembalap->filterPembalapasc();
+} else if(isset($_POST['btn-filter-desc'])){
+    $listPembalap->filterPembalapdesc();
+} 
+else {
     $listPembalap->getPembalapJoin();
 }
 
